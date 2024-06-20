@@ -1,18 +1,12 @@
-def print_pyramid(levels):
-    for i in range(levels):
-        
-        for j in range(levels - i - 1):
-            print(" ", end="")
-        
-        
-        for k in range(2 * i + 1):
-            print("*", end="")
-        
-        
+def pyramid(rows):
+    for i in range(1,rows+1):
+        for j in range(rows - i):
+            print(" ",end=" ")
+        for j in range(1, i + 1):
+            print(j, end=" ")
+        for j in range(i - 1, 0, -1):
+            print(j, end=" ")
         print()
-
-
-levels = int(input("Enter the number of levels for the pyramid: "))
-print_pyramid(levels)
-
+rows = int(input("Enter the number of rows for the pyramid: "))
+pyramid(rows)
 
